@@ -1,0 +1,23 @@
+.navbar {
+    background-color: rgb(226, 122, 43);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 400;
+}
+
+.nav__logo {
+    font-size: 20px;
+    flex-grow: 1;
+    margin-left: 43px;
+}
+
+.nav__avatar>img {
+    width: 70px;
+}
+
+.nav__avatar {
+    flex-grow: 0;
+}
