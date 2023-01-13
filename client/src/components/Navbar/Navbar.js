@@ -1,25 +1,29 @@
-import React from 'react';
+import React from "react";
 import "./Navbar.css";
-import profilePic from "../../../src/assets/userLogo.png";
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 
-const Navbar = ({onClickDrawer}) => {
+import { Link } from "react-router-dom";
+
+const Navbar = ({ open }) => {
+  console.log(open);
   return (
-    <div className="navbar">
-        <div className="nav__hamburger">
-        <IconButton onClick={onClickDrawer}>
-          <MenuIcon/>
-        </IconButton>
-        </div>
-        <div className="nav__logo">
-            <img src="" alt="Blog" />
-        </div>
-        <div className="nav__avatar">
-            <img src={profilePic} alt="User" />
-        </div>
-    </div>
-  )
-}
+    <div className={`navbar ${open ? "navbar__custom" : ""}`}>
+      {/* logo */}
+      <div className="navbar__logo">
+        <h1 style={{ color: "#ffffff", fontSize: "50px" }}>B</h1>
+      </div>
 
-export default Navbar
+      {/* display after sign in */}
+      {open ? (
+        <div className="navbar__menu">
+          <Link to="/blog">My Blogs</Link>
+          <Link to="/blog">Create Blog</Link>
+          <Link to="/blog">logout</Link>
+        </div>
+      ) : (
+        <></>
+      )}
+    </div>
+  );
+};
+
+export default Navbar;

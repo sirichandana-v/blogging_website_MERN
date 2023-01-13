@@ -1,0 +1,88 @@
+.splash {
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.splash__button>button {
+    width: 145px;
+    height: 50px;
+    background: rgb(2, 0, 36);
+    /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.9054972330729166) 35%, rgba(0, 212, 255, 1) 100%); */
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 62px;
+    margin-top: 40px
+}
+
+.splash__left {
+    height: 82.9vh;
+    width: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    right: 100%;
+    /* border: 1px dashed #900; */
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+    background-color: #F96167;
+    font-size: 70px;
+    padding-top: 120px;
+    padding-left: 30px;
+    color: white;
+    line-height: 120px;
+}
+
+.splash__right {
+    height: 100vh;
+    width: 50%;
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out;
+    background-color: #FCE77D;
+    /* border: 1px dashed #900; */
+    border-top: none;
+}
+
+.splash__right>img {
+    height: 300px;
+    object-fit: cover;
+    margin-top: 190px;
+    transition: all 0.5s ease-out;
+}
+
+.open__left {
+    transform: translateX(0);
+}
+
+.open__right {
+    transform: translateX(0);
+}
+
+.open__rightImg {
+    display: none;
+}
+
+.open__rightLogin {
+    display: none;
+}
+
+.hide__button {
+    display: none;
+}
+
+.splash__home {
+    height: 100vh;
+    overflow-y: hidden;
+    z-index: -2;
+}

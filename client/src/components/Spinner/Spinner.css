@@ -1,0 +1,16 @@
+.spinner {
+    margin: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner>img {
+    /* margin-top: 350px;
+    margin-left: 768px; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

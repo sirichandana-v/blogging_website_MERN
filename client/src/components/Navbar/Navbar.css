@@ -1,23 +1,42 @@
 .navbar {
-    background-color: rgb(226, 122, 43);
+    /* background-color: rgb(3, 3, 78); */
+    padding: 0px;
+    /* background: linear-gradient(180deg, rgba(71, 71, 208, 1) 1%, rgba(12, 12, 199, 1) 1%, rgba(198, 94, 198, 1) 41%); */
+    /* background: linear-gradient(90deg, rgba(71, 71, 208, 1) 1%, rgba(12, 12, 199, 1) 1%, rgba(177, 12, 177, 1) 41%); */
+    /* background-color: rgb(15, 15, 222); */
     height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(252, 231, 125, 1) 16%, rgba(249, 97, 103, 1) 70%);
     display: flex;
+    justify-content: space-between;
+    /* background: linear-gradient(90deg,rgba(249, 97, 103, 1) 16%, rgba(252, 231, 125, 1) 59%); */
+}
+
+.navbar__logo {
+    margin-left: 20px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.navbar__menu {
+    display: flex;
+    margin-right: 20px;
     align-items: center;
-    position: sticky;
-    top: 0px;
-    z-index: 400;
+    justify-content: space-between;
 }
 
-.nav__logo {
-    font-size: 20px;
-    flex-grow: 1;
-    margin-left: 43px;
+.navbar__menu>a {
+    padding-left: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(245, 245, 232);
 }
 
-.nav__avatar>img {
-    width: 70px;
-}
-
-.nav__avatar {
-    flex-grow: 0;
+.navbar__custom {
+    background: linear-gradient(90deg, rgba(252, 231, 125, 1) 0%, rgba(249, 97, 103, 1) 11%);
 }

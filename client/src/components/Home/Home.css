@@ -1,0 +1,6 @@
+home {
+    width: 100%;
+    background-color: #FCE77D;
+    display: flex;
+    justify-content: space-between;
+}

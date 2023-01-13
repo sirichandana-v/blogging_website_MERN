@@ -1,36 +1,25 @@
-import { 
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link
-} from 'react-router-dom';
-import { useState } from 'react';
-import SlideDrawer from './components/SlideDrawer/SlideDrawer';
-import Navbar from './components/Navbar/Navbar';
-import './App.css';
-import Blog from "./components/Blog/Blog"
-import Posts from './components/Post/Posts';
-import Theme from './components/Theme/Theme';
-import { CreatePost } from './components/CreatePost/CreatePost';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
+import Blog from "./components/Blog/Blog";
+import Splash from "./components/Splash/Splash";
+import Home from "./components/Home/Home";
 
 function App() {
-
-  const [openDrawer, setopenDrawer] = useState(false);
-  const onClickDrawer=()=>{
-    setopenDrawer((prev)=>!prev);
-  };
-  const [blogName, setblogName]=useState("my blog");
-  
+  const [open, setOpen] = useState(false);
   return (
     <div className="App">
-     <Router>  
-      <Navbar onClickDrawer={onClickDrawer}/>
-      <SlideDrawer openDrawer={openDrawer}/>
-        <Routes> 
-          <Route exact path='/' element={<Posts title={blogName}/>}/>
-          <Route exact path='/blog' element={<Blog/>}/>
-          <Route exact path='/themes' element={<Theme/>}/>
-          <Route exact path='/createpost' element={<CreatePost/>}/>
+      <Router>
+        <Navbar open={open} />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={<Splash open={open} setOpen={setOpen} />}
+          />
+          <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/home" element={<Home />} />
         </Routes>
       </Router>
     </div>
